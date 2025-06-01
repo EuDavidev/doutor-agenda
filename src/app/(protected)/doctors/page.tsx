@@ -10,7 +10,7 @@ import {
   PageHeader,
   PageHeaderContent,
   PageTitle,
-} from "@/components/page-container";
+} from "@/components/ui/page-container";
 import { Button } from "@/components/ui/button";
 import { auth } from "@/lib/auth";
 
