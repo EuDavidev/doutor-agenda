@@ -1,4 +1,3 @@
-
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 
@@ -32,4 +31,5 @@ const AuthenticationPage = async () => {
     </div>
   );
 };
+
 export default AuthenticationPage;

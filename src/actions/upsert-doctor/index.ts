@@ -48,8 +48,6 @@ export const upsertDoctor = actionClient
         clinicId: session?.user.clinic?.id,
         availableFromTime: availableFromTimeUTC.format("HH:mm:ss"),
         availableToTime: availableToTimeUTC.format("HH:mm:ss"),
-        avatarImageUrl: parsedInput.avatarImageUrl || "",
-        speciality: parsedInput.speciality,
       })
       .onConflictDoUpdate({
         target: [doctorsTable.id],

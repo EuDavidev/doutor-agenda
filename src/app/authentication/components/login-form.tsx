@@ -5,7 +5,7 @@ import { Loader2 } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
-import z from "zod";
+import { z } from "zod";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -16,14 +16,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
+import { FormControl, FormMessage } from "@/components/ui/form";
+import { FormItem, FormLabel } from "@/components/ui/form";
+import { Form, FormField } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { authClient } from "@/lib/auth-client";
 
@@ -64,13 +59,13 @@ const LoginForm = () => {
         },
       },
     );
-  }
+  };
 
   const handleGoogleLogin = async () => {
     await authClient.signIn.social({
       provider: "google",
-      callbackURL: '/dashboard',
-      scopes: ["email", "profile",],
+      callbackURL: "/dashboard",
+      scopes: ["email", "profile"],
     });
   };
 

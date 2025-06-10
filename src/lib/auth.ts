@@ -25,20 +25,22 @@ export const auth = betterAuth({
         where: eq(usersToClinicsTable.userId, user.id),
         with: {
           clinic: true,
-        }
+        },
       });
-      // TODO: Ao adaptar para o usuário para ter mais clínicas, deve-se alterar esse código
+      // TODO: Ao adaptar para o usuário ter múltiplas clínicas, deve-se mudar esse código
       const clinic = clinics?.[0];
       return {
         user: {
           ...user,
-          clinic: clinic?.clinic ? {
-            id: clinic?.clinicId,
-            name: clinic?.clinic?.name,
-          } : undefined,
+          clinic: clinic?.clinicId
+            ? {
+                id: clinic?.clinicId,
+                name: clinic?.clinic?.name,
+              }
+            : undefined,
         },
         session,
-      }
+      };
     }),
   ],
   user: {

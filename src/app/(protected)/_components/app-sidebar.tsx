@@ -1,6 +1,5 @@
 "use client";
 
-import { AvatarFallback } from "@radix-ui/react-avatar";
 import {
   CalendarDays,
   LayoutDashboard,
@@ -12,7 +11,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 
-import { Avatar } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -99,14 +98,16 @@ export function AppSidebar() {
           <SidebarMenuItem>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <SidebarMenuButton size="lg" >
+                <SidebarMenuButton size="lg">
                   <Avatar>
-                    <AvatarFallback>D</AvatarFallback>
+                    <AvatarFallback>F</AvatarFallback>
                   </Avatar>
                   <div>
-                    <p className="text-sm">{session.data?.user?.clinic?.name}</p>
+                    <p className="text-sm">
+                      {session.data?.user?.clinic?.name}
+                    </p>
                     <p className="text-muted-foreground text-sm">
-                      {session.data?.user?.email}
+                      {session.data?.user.email}
                     </p>
                   </div>
                 </SidebarMenuButton>
