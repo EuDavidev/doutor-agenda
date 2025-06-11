@@ -74,7 +74,7 @@ const DoctorCard = ({ doctor }: DoctorCardProps) => {
           </Avatar>
           <div>
             <h3 className="text-sm font-medium">{doctor.name}</h3>
-            <p className="text-muted-foreground text-sm">{doctor.specialty}</p>
+            <p className="text-muted-foreground text-sm">{doctor.speciality}</p>
           </div>
         </div>
       </CardHeader>
