@@ -15,13 +15,13 @@ import { Progress } from "@/components/ui/progress";
 
 interface TopSpecialtiesProps {
   topSpecialties: {
-    specialty: string;
+    speciality: string;
     appointments: number;
   }[];
 }
 
-const getSpecialtyIcon = (specialty: string) => {
-  const specialtyLower = specialty.toLowerCase();
+const getSpecialtyIcon = (speciality: string) => {
+  const specialtyLower = speciality.toLowerCase();
 
   if (specialtyLower.includes("cardiolog")) return Heart;
   if (
@@ -60,15 +60,15 @@ export default function TopSpecialties({
 
         {/* specialtys List */}
         <div className="space-y-6">
-          {topSpecialties.map((specialty) => {
-            const Icon = getSpecialtyIcon(specialty.specialty);
+          {topSpecialties.map((speciality) => {
+            const Icon = getSpecialtyIcon(speciality.speciality);
             // Porcentagem de ocupação da especialidade baseando-se no maior número de agendamentos
             const progressValue =
-              (specialty.appointments / maxAppointments) * 100;
+              (speciality.appointments / maxAppointments) * 100;
 
             return (
               <div
-                key={specialty.specialty}
+                key={speciality.speciality}
                 className="flex items-center gap-2"
               >
                 <div className="bg-primary/10 flex h-10 w-10 items-center justify-center rounded-full">
@@ -76,10 +76,10 @@ export default function TopSpecialties({
                 </div>
                 <div className="flex w-full flex-col justify-center">
                   <div className="flex w-full justify-between">
-                    <h3 className="text-sm">{specialty.specialty}</h3>
+                    <h3 className="text-sm">{speciality.speciality}</h3>
                     <div className="text-right">
                       <span className="text-muted-foreground text-sm font-medium">
-                        {specialty.appointments} agend.
+                        {speciality.appointments} agend.
                       </span>
                     </div>
                   </div>
