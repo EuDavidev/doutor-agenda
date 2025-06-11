@@ -8,7 +8,7 @@ interface TopDoctorsProps {
     id: string;
     name: string;
     avatarImageUrl: string | null;
-    specialty: string;
+    speciality: string;
     appointments: number;
   }[];
 }
@@ -41,7 +41,7 @@ export default function TopDoctors({ doctors }: TopDoctorsProps) {
                 <div>
                   <h3 className="text-sm">{doctor.name}</h3>
                   <p className="text-muted-foreground text-sm">
-                    {doctor.specialty}
+                    {doctor.speciality}
                   </p>
                 </div>
               </div>
