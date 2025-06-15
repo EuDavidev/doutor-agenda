@@ -2,7 +2,6 @@
 
 **Sistema de agendamento médico completo com dashboard e pagamentos integrados**  
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) 
 [![Next.js](https://img.shields.io/badge/Next.js-13.5.4-000000?logo=next.js&logoColor=white)](https://nextjs.org)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.2.2-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Stripe](https://img.shields.io/badge/Stripe-12.0.0-008CDD?logo=stripe&logoColor=white)](https://stripe.com)
