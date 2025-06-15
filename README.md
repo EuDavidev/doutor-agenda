@@ -10,7 +10,7 @@
 
 ## ✨ Demonstração
 
-![Dashboard Preview](https://github.com/EuDavidev/doutor-agenda/blob/main/public/dashboard-preview.png?raw=true)
+![Dashboard Preview](https://github.com/EuDavidev/doutor-agenda/blob/main/public/dashboard.png?raw=true)
 
 ## 🚀 Recursos Principais
 
