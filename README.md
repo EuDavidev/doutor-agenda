@@ -49,29 +49,3 @@
 ![Neon](https://img.shields.io/badge/Neon-2.0-00E59B?logoColor=white)
 ![Vercel](https://img.shields.io/badge/Vercel-1.0-000000?logo=vercel&logoColor=white)
 
-## 📦 Pré-requisitos
-
-- Node.js 18+
-- PostgreSQL 15+ ou conta no [Neon](https://neon.tech)
-- Conta no [Stripe](https://stripe.com) para pagamentos
-- Variáveis de ambiente configuradas (ver `.env.example`)
-
-## 🛠 Instalação Local
-
-```bash
-# Clone o repositório
-git clone https://github.com/EuDavidev/doutor-agenda.git
-cd doutor-agenda
-
-# Instale as dependências
-npm install
-
-# Configure o ambiente
-cp .env.example .env
-# Preencha as variáveis no arquivo .env
-
-# Execute as migrações do banco
-npx drizzle-kit push:pg
-
-# Inicie o servidor
-npm run dev
